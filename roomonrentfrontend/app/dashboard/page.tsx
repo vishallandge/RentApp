@@ -8,7 +8,8 @@ export default function Dashboard() {
 
       <textarea rows={6} cols={60} value={getToken() || ""} readOnly />
 
-      <br /><br />
+      <br />
+      <br />
 
       <button onClick={logout}>Logout</button>
     </div>
