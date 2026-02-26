@@ -4,8 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import InputField from "../../components/InputField";
-import MyLogo from "../../public/flaticon.png";
-import Image from "next/image";
 
 export default function LoginPage() {
   const router = useRouter(); // ✅ important
@@ -39,15 +37,7 @@ export default function LoginPage() {
       <div className="grid lg:grid-cols-2 w-4xl  max-w-6xl bg-white shadow-2xl overflow-hidden">
         {/* LEFT PANEL */}
         <div className=" w-sm hidden lg:flex flex-col justify-center text-center bg-gray-200 text-white gap-10">
-          <div className="flex justify-center">
-            <Image
-              src={MyLogo}
-              alt="logo"
-              width={300}
-              height={300}
-              className=""
-            />
-          </div>
+          <p className="text-5xl text-center">🏠</p>
           <div>
             <h1 className="text-3xl font-bold text-black tracking-wide">
               Login/singup
