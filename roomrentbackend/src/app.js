@@ -1,3 +1,24 @@
+import express from "express";
+import cors from "cors";
+
+import authRoutes from "./routes/authRoutes.js";
+import ownerRoutes from "./routes/ownerRoutes.js";
+import tenantRoutes from "./routes/tenantRoutes.js";
+
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+// Routes
+app.use("/api/auth", authRoutes);//changes remove /auth
+app.use("/api/owner", ownerRoutes);
+app.use("/api/tenant", tenantRoutes);
+
+
+export default app;
+
 // // const express = require('express');
 // // const cors = require('cors');
 // // const helmet = require('helmet');
@@ -42,19 +63,19 @@
 
 
 
-const express = require("express");
-const cors = require("cors");
-const passport = require("passport");
-require("dotenv").config();
-require("./config/passport");
+// const express = require("express");
+// const cors = require("cors");
+// const passport = require("passport");
+// require("dotenv").config();
+// require("./config/passport");
 
-const authRoutes = require("./routes/authRoutes");
+// const authRoutes = require("./routes/authRoutes");
 
-const app = express();
+// const app = express();
 
-app.use(cors());
-app.use(passport.initialize());
+// app.use(cors());
+// app.use(passport.initialize());
 
-app.use("/api/auth", authRoutes);
+// app.use("/api/auth", authRoutes);
 
-module.exports = app;
+// module.exports = app;
